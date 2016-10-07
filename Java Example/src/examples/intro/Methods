@@ -1,0 +1,146 @@
+Methods are also important as they do different tasks and provide access to specific variables.
+There are two types of methods: static and non-static. If a class is a workshop, picture static methods as tools everyone can use and 
+don't change, and non-static methods as the specific engine of a specific car; availble to all cars, but each car has their own one. The 
+same applies to private variables, and public static variables.
+
+A program needs a main method to start from. In java, it's called main. Let's look at the composition of a method.
+
+<access modifier> <static ?> <return type> <name>(<parameters>) {
+   
+}
+
+Cool, now let's look at java's main method
+
+public static void main(String[] args) {
+
+}
+
+Sweet-o. Let's try to understand it. 
+The visibility of the main method is public because the access is "public".
+The main method is static, meaning it can be accessed directly.
+The return type is void, void is nothing, so nothing is returned.
+The name of the method is "main". This makes sense because we like our methods named for their purpose.
+The parameters include the variable "args".
+
+Wow parameters are confusing lets zoom in™.
+
+Parameters are lists of variables needed for the method. You cannot call a method without the meeting its parameter count.
+
+How do we define a variable? Let's try it. The following is the composition of variable definition.
+
+<access modifier> <variable type> <variable name>;
+
+As an example,
+
+private String myFirstString;
+
+//Note that variables begin with a lower case letter by convention, as well as method names.
+
+the "private" means that this variable is only visible to the specific code block in which it resides. "String" is the variable 
+type. "String" refers to a "String of characters" which could be anything. Of course, myFirstString is the variable name.
+Notice how a semicolon ends the line. In Java, every line that has code written and doesn't end in a { or } should end with a ;.
+
+Never forget your semicolons.
+
+Ever.
+
+Back to our main method, and its parameter String[] args. The [] after String is used to define an *array*. Basically, an array is
+a list. This means that args is an *array* of *Strings* or "A list of Strings." However, this is typically not used in the main method.
+
+Let's make our own method to do something cool.
+
+public int add(int x, int y) {
+
+}
+
+The "public" is its visibility. The "int" is it's return type. "int" is a reserved word meaning an integer, which is a real whole number.
+Any number from -infinity to infinity that doesn't have a decimal is an integer, or int. (-5,-4,-3,-2,-1,0,1,2,3,4,5...). This means that 
+the method will give back an int. Of course "add" is the name of our cool swaggy hip new method. Finally, we get to "int x, int y"
+
+This defines two method specific variables as parameters. integer x and integer y. We remember that "int" means "any real whole number"
+so we know that x and y are both numbers. Coolio, now let's "add" them together.
+
+public int add(int x, int y) {
+    //lets define a new variable called "int result" for the resulting value from x + y.
+    //Anything that comes after a "//" in java makes it a comment, meaning it has no effect on the code.
+    int result = 0;
+    //We just set our result variable to a value of 0. This is okay because 0 is an integer (it exists and has no decimal). 0.0 would not 
+    //work because it contains a decimal.
+    //We want result to equal the value of x plus y. If we wrote this on paper, we would write " result = x + y " (if you've taken a 
+    //math class in your life at some point). This is how java works too. We'll do it below.
+    result = x + y;
+    //Now we're changing the value of result to equal the value of x plus y. An easy way to remember this is what's on the left becomes 
+    //the right.
+    //Now we want to return our result. This is simple, we use the reserved word "return" to return the value, and then our variable 
+    //"result" to specify what we're returning.
+    return result;
+    //Always remember semicolons
+}
+
+If we clean out the comments, our final method looks like this
+
+public int add(int x, int y) {
+    int result = 0;
+    result = x + y;
+    return result;
+}
+
+Note that we also could have written "int result = 0" as "int result = x + y" and skipped a line.
+
+It's time to jump over the grand canyon and see how this all works together.
+
+First we'll define our class
+
+public class MySecondClass {
+
+}
+
+Next we'll add our main method
+
+
+public class MySecondClass {
+
+    public static void main(String[] args) {
+        //Cool it doesn't do anything.
+    }
+
+}
+
+Now lets make a few new variables with helpful names. x, y, and finalAnswer
+
+public class MySecondClass {
+
+    public static void main(String[] args) {
+        int a = 5;
+        int b = 3;
+        int finalAnswer = 0;
+    }
+
+}
+
+Cool, now let's add our "add" method to our class and use it to set finalAnswer to whatever our "add" method gives back.
+Note that the variables used when calling a method don't have to match the variable names in the parameters, but they do have
+to match type. (int =/= String, etc)
+
+public class MySecondClass {
+
+    public static void main(String[] args) {
+        int a = 5;
+        int b = 3;
+        int finalAnswer = add(a, b);
+        //Now final answer is equal to a + b or 5 + 3 or 8.
+    }
+    
+    //Note that our add method is static, this is because static methods can only access other static methods.
+    
+    public static void add(int x, int y) {
+        int result = 0;
+        result = x + y;
+        return result;
+    }
+}
+
+
+Now if we ran our program, it would start our main method. Our main method defines our variable a and sets it equal to 5. It then defines 
+our variable b and sets it to 3. Finally it defines finalAnswer and uses our method add(int x, int y) to add variables a and b together.
+Sweet you have a basic understanding of methods!
