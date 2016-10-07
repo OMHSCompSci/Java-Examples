@@ -1,1 +1,63 @@
-Classes are important in Java.
+In Java, classes are used for a few things. They're used to create outlines of Objects, run the program, and to be used 
+as public resources. Let's start with defining a class. You'll do this any time you want to do anything in java.
+///////
+
+public class MyFirstClass {
+
+}
+
+///////
+Note: Caps do matter in java. Every single capital letter is important. *Reserved words* are special words in java that do specific 
+things. "public" and "class" are both reserved words. Reserved words cannot be used for variable names. "MyFirstClass" is the name of
+the class. By convention, class names start with a capital letter, and usually do not contain underscores and instead use capital letters 
+to differentiate words.
+
+Note part 2: The brackets { } help define layers of code. Every block is begun and finished with an open and close bracket. This helps
+to stay organized.
+
+It's as simple as that. Let's define a few terms.
+
+ - public: This reserved word refers to the visibility of a class, object, or variable. There are 3 types of visibility: public, private 
+           and protected. "public" means anything can see the variable / class / object from anywhere. "private" means the 
+           variable / class / object is only visible to the specific block of code it's in. "protected" means anything on the same 
+           visibility level and lower will be able to access it. (I'll do examples later)
+           
+ - class : class is a reserved word. It is used to define new classes. It can be used for variables too, but this won't be needed.
+
+Other reserved words can be looked up by searching 'java reserved words'.
+
+In computer science as well as math, thinking abstractly is important. Let's try to make our class example a litle more abstract
+
+//////
+<access modifier> <file type> <name>{
+
+}
+//////
+
+We already talked about the different access modifiers (public, protected, private), and the name is intuitive. What is the file type
+for? class is not the only type of file / class type you can define. There are others, like interface and abstract class. These aren't as 
+important right now. 
+
+Now you should be able to construct any class you want (kind of).
+
+Ex:
+
+public class Game {
+
+}
+
+public class Swaggy {
+
+}
+
+private class Helper {
+
+}
+
+public abstract class Entity {
+
+}
+
+public interface Human {
+
+}
